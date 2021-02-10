@@ -12,7 +12,6 @@ public class Main {
         UserService userService = context.getBean(UserService.class);
         User firstUser = new User();
         firstUser.setName("first");
-        firstUser.setAge(12);
         userService.add(firstUser);
         userService.listUsers().forEach(System.out::println);
         User secondUser = new User();
