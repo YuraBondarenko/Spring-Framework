@@ -46,4 +46,15 @@ public class UserDaoImpl implements UserDao {
             throw new RuntimeException("Cannot get any user", e);
         }
     }
+
+    @Override
+    public User getById(Long id) {
+        try(Session session = sessionFactory.openSession()) {
+            return session.get(User.class, id);
+        } catch (Exception e) {
+            throw new RuntimeException("Cannot get user by id " + id, e);
+        }
+    }
+
+
 }
