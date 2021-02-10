@@ -11,7 +11,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private int age;
+    private String email;
 
     public Long getId() {
         return id;
@@ -29,12 +29,12 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class User {
         return "User{"
                 + "id=" + id
                 + ", name='" + name + '\''
-                + ", age=" + age
+                + ", email='" + email + '\''
                 + '}';
     }
 }
