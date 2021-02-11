@@ -1,6 +1,5 @@
 package spring.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import spring.dto.UserResponseDto;
 import spring.model.User;
