@@ -11,7 +11,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private int age;
+    private String email;
+    private String password;
 
     public Long getId() {
         return id;
@@ -29,12 +30,20 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -42,7 +51,7 @@ public class User {
         return "User{"
                 + "id=" + id
                 + ", name='" + name + '\''
-                + ", age=" + age
+                + ", email='" + email + '\''
                 + '}';
     }
 }
