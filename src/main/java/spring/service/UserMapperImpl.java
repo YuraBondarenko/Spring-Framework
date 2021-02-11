@@ -7,13 +7,6 @@ import spring.model.User;
 
 @Component
 public class UserMapperImpl implements UserMapper {
-    private final UserService userService;
-
-    @Autowired
-    public UserMapperImpl(UserService userService) {
-        this.userService = userService;
-    }
-
     @Override
     public UserResponseDto getUserResponseDto(User user) {
         UserResponseDto dto = new UserResponseDto();
